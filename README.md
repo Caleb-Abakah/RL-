@@ -1,8 +1,8 @@
-# Frozen Lake from First Principles — Q-Learning
+# Frozen Lake from First Principles: Q-Learning
 
 A complete Reinforcement Learning solution to the 8×8 **Frozen Lake** problem, implemented
 entirely from scratch in Python. No Gymnasium, OpenAI Gym, Stable Baselines, RLlib, or any
-other RL framework is used — the environment, agent, training loop, and evaluation are all
+other RL framework is used - the environment, agent, training loop, and evaluation are all
 written by hand.
 
 > **Course:** DSCD 614 — Reinforcement Learning · Assignment 1
@@ -96,7 +96,7 @@ exploration to discover it for the first time.
 ### Description
 
 Q-Learning is a value-based, model-free RL algorithm. It maintains a **Q-table** of estimates
-`Q(s, a)` — the expected long-term value of taking action `a` in state `s`. The table starts
+`Q(s, a)` - the expected long-term value of taking action `a` in state `s`. The table starts
 at all zeros and is refined as the agent gathers experience. Once trained, acting optimally is
 simply choosing the highest-valued action in each state.
 
@@ -108,9 +108,9 @@ After every transition `(s, a, r, s')`, the relevant Q-value is updated by:
 Q(s, a) <- Q(s, a) + α [ r + γ · max_a' Q(s', a') − Q(s, a) ]
 ```
 
-- **TD target** `r + γ · max_a' Q(s', a')` — a better estimate of the value of `(s, a)`:
+- **TD target** `r + γ · max_a' Q(s', a')` - a better estimate of the value of `(s, a)`:
   the reward just received plus the discounted value of the best action available next.
-- **TD error** `target − Q(s, a)` — how wrong the old estimate was.
+- **TD error** `target − Q(s, a)` - how wrong the old estimate was.
 - **α (learning rate)** controls how far the estimate moves toward the target.
 - **γ (discount factor)** controls how much future reward is valued versus immediate reward.
 
@@ -184,10 +184,10 @@ arrows from `S` traces a safe path to `G` that avoids every hole:
 
 - **Deterministic lake:** the agent learns an optimal route and reaches the goal on every
   evaluation episode. Because transitions are deterministic, the greedy policy follows the same
-  path every time, so success is all-or-nothing — here, 100%.
+  path every time, so success is all-or-nothing. here, 100%.
 - **Hyperparameter robustness:** on the deterministic lake, every reasonable hyperparameter
   setting converges to a high success rate; differences between settings are small and mostly
-  seed-dependent. This is itself a finding — Q-Learning is very robust when the dynamics are
+  seed-dependent. This is itself a finding.  Q-Learning is very robust when the dynamics are
   predictable.
 - **Slippery lake (bonus):** with stochastic transitions the success rate drops below 100%,
   because an unlucky slip near a hole can end an episode despite a sound policy. The agent
@@ -197,12 +197,12 @@ arrows from `S` traces a safe path to `G` that avoids every hole:
   stochastic, demonstrating that the method naturally handles randomness by learning from the
   transitions it actually experiences.
 - **Unvisited states:** cells the agent rarely visits (e.g. pockets sealed off by holes) keep
-  near-zero Q-values, so their extracted action is essentially arbitrary. This is expected —
+  near-zero Q-values, so their extracted action is essentially arbitrary. This is expected,
   the agent only learns good actions where it has gathered experience.
 
 ---
 
-## 6. Bonus — Stochastic ("Slippery") Transitions
+## 6. Stochastic ("Slippery") Transitions
 
 The bonus implements **Option A: stochastic transitions** (`SlipperyFrozenLakeEnv`). When the
 agent chooses an action, it moves in the intended direction with probability `p_intended`
@@ -228,7 +228,7 @@ pip install -r requirements.txt
 # Deterministic environment (core task)
 python train.py
 
-# Stochastic / slippery environment (bonus)
+# Stochastic / slippery environment 
 python train.py --slippery
 
 # Experiment with hyperparameters
