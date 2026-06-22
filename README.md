@@ -39,10 +39,10 @@ F H F F H F H F
 F F F H F F F G
 ```
 
-- **S** — Start state (top-left)
-- **F** — Frozen, safe to stand on
-- **H** — Hole; entering ends the episode in failure
-- **G** — Goal; entering ends the episode in success
+- **S** - Start state (top-left)
+- **F** - Frozen, safe to stand on
+- **H** - Hole; entering ends the episode in failure
+- **G** - Goal; entering ends the episode in success
 
 The agent does not know the map in advance. It must learn a safe path purely from the reward
 signal.
