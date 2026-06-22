@@ -5,7 +5,7 @@ entirely from scratch in Python. No Gymnasium, OpenAI Gym, Stable Baselines, RLl
 other RL framework is used - the environment, agent, training loop, and evaluation are all
 written by hand.
 
-> **Course:** DSCD 614 — Reinforcement Learning · Assignment 1
+> **Course:** DSCD 614: Reinforcement Learning · Assignment 1
 > **Name:** _<Caleb Abakah Mensah>_
 > **Student ID:** _<22424188>_
 
@@ -20,7 +20,7 @@ make decisions by interacting with an **environment**. At each step the agent ob
 **state**, chooses an **action**, and receives a **reward** plus the next state. It is never
 told the correct action directly; instead it must discover, through trial and error, a
 **policy** (a mapping from states to actions) that maximises the total reward it collects over
-time. This is the defining feature of RL — learning from consequences rather than from labelled
+time. This is the defining feature of RL, learning from consequences rather than from labelled
 examples.
 
 ### What is Frozen Lake?
