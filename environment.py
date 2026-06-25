@@ -15,7 +15,10 @@ State is a single integer in [0, n_states - 1], where:
 
 Actions
 -------
-    0 = Left, 1 = Down, 2 = Right, 3 = Up
+    0 = Left, 
+    1 = Down, 
+    2 = Right, 
+    3 = Up
 """
 
 import numpy as np
