@@ -1,0 +1,12 @@
+{
+  "slippery": false,
+  "p_intended": 0.3333333333333333,
+  "episodes": 20000,
+  "alpha": 0.1,
+  "gamma": 0.99,
+  "epsilon_start": 1.0,
+  "epsilon_min": 0.01,
+  "epsilon_decay": 0.9995,
+  "seed": 42,
+  "final_train_success_rate": 99.0
+}

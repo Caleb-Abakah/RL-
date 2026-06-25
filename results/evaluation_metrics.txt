@@ -1,0 +1,6 @@
+Environment: Deterministic
+Episodes: 100
+Successful runs: 100
+Failures: 0
+Success rate: 100.0%
+Average reward: 1.000

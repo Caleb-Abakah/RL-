@@ -1,0 +1,5 @@
+Environment: deterministic
+Episodes: 20000
+alpha=0.1, gamma=0.99, epsilon_decay=0.9995
+Final training success rate (last 1000): 99.0%
+Total successful episodes: 17936
